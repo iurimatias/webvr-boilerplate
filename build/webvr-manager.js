@@ -395,7 +395,7 @@ WebVRManager.Modes = Modes;
 WebVRManager.prototype.render = function(scene, camera, timestamp) {
   // Scene may be an array of two scenes, one for each eye.
   if (scene instanceof Array) {
-    this.effect.render(scene[0], camera);
+    this.effect.render(scene[0], scene[1], camera);
   } else {
     this.effect.render(scene, camera);
   }
